@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Verification | clara - Free Hentai Games</title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+<style>
+body {
+    background-image: url('/assets/images/age-verify-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+.blur-overlay {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+  <div class="blur-overlay absolute inset-0">
+   </div>
+    
+<div class="relative z-10 bg-gray-900/90 border border-pink-600 rounded-lg p-8 max-w-md w-full mx-4 shadow-xl">
+  <div class="text-center mb-8">
+    <img src="/assets/logos/logo.gif" alt="Logo" class="h-16 w-16 rounded-lg mx-auto mb-4">
+    <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">Age Verification</h1>
+            <p class="text-gray-300">This website contains adult content and is only for visitors 18+</p>
+            </div>
+        
+<div class="space-y-4">
+  <div class="bg-gray-800/50 p-4 rounded-lg">
+    <h2 class="text-lg font-semibold text-white mb-2">By entering this site you agree to:</h2>
+<ul class="text-gray-300 text-sm space-y-2">
+ <li class="flex items-start">
+  <svg class="w-4 h-4 text-pink-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+         </svg>
+        <span>You are 18 years of age or older
+      </span>
+     </li>
+<li class="flex items-start">
+  <svg class="w-4 h-4 text-pink-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+    </svg>
+    <span>You comply with the laws of your country/region</span>
+    </li>
+    <li class="flex items-start">
+     <svg class="w-4 h-4 text-pink-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      <span>You accept our <a href="#" class="text-pink-400 hover:underline">Terms of Service</a> and <a href="#" class="text-pink-400 hover:underline">Privacy Policy</a></span>
+    </li>
+  </ul>
+</div>
+            
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+  <a href="pages/home.html" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-200 flex-1">I am 18 or older - Enter
+  </a>
+  <a href="https://www.google.com" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-200 flex-1">I am under 18 - Exit
+    </a>
+  </div>
+</div>
+        
+<div class="mt-8 text-center text-xs text-gray-500">
+  <p>All models were 18 years of age or older at the time of depiction.</p>
+  </div>
+</div>
+
+<script>
+  document.querySelector('a[href="pages/home.html"]').addEventListener('click', function(e) {
+    localStorage.setItem('ageVerified', 'true');
+});
+  </script>
+ </body>
+</html>
