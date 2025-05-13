@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>clara - Free Hentai Games</title>
+<script src="https://cdn.tailwindcss.com">
+  </script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        height: {
+          'hero-mobile': '15rem',
+          'hero-desktop': '25rem',
+            }
+         }
+       }
+     }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+            <!-- Header -->
+<header class="flex items-center justify-between p-4 bg-gray-800 sticky top-0 z-10">
+  <div class="flex items-center space-x-2">
+    <img src="/assets/logos/logo.gif" alt="Logo" class="h-8 w-8 rounded-lg">
+    <span class="text-xl font-bold"></span>
+</div>
+    <!-- Hamburger -->
+    <button id="menu-toggle" class="sm:hidden focus:outline-none z-50">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden sm:flex space-x-4">
+      <a href="/home.html" class="hover:text-pink-400">Home</a>
+      <a href="/games/games.html" class="hover:text-pink-400">Games</a>
+      <a href="/games/categories.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+        </svg>
+        Categories
+      </a>
+      <a href="/pages/news.html" class="hover:text-pink-400">News</a>
+      <a href="/auth/login.html" class="bg-pink-600 px-3 py-1 rounded hover:bg-pink-700">Login</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar Nav -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white p-6 transform -translate-x-full transition-transform duration-300 ease-in-out z-40 sm:hidden">
+    <button id="close-menu" class="mb-6 text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <nav class="flex flex-col space-y-4">
+      <a href="/index.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        Home
+      </a>
+      <a href="/games/games.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Games
+      </a>
+      <a href="/games/categories.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+        </svg>
+        Categories
+      </a>
+      <a href="/pages/news.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+        </svg>
+        News
+      </a>
+      <a href="/auth/login.html" class="bg-pink-600 px-3 py-1 rounded hover:bg-pink-700 w-fit">Login</a>
+    </nav>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30 sm:hidden"></div>
+          <!-- Hero Section -->
+<section class="relative">
+  <img src="/assets/images/hero-banner.jpg" alt="Hero Banner" class="w-full h-hero-mobile md:h-hero-desktop object-cover">
+  <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-2xl md:text-5xl font-bold mb-4 max-w-3xl leading-tight">The Best Free Hentai Games for Android, iOS, and PC</h1>
+   <a href="/games/game1.html" class="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-lg text-lg font-bold transition duration-200 shadow-lg">Play Now</a>
+    </div>
+</section>
+       <!-- Most Popular Games -->
+<section class="p-4 md:p-8 max-w-6xl mx-auto">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6">Most Popular Free Games</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6">
+         <!-- Game Cards -->
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md">
+  <img src="/assets/images/game1.jpg" alt="#1" class="w-full h-40 md:h-48 object-cover">
+  <div class="p-3">
+    <h3 class="text-sm md:text-base font-semibold truncate">#</h3>
+    <p class="text-xs md:text-sm text-gray-400">Adventure</p>
+    </div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md">
+  <img src="/assets/images/game2.jpg" alt="#2" class="w-full h-40 md:h-48 object-cover">
+  <div class="p-3">
+    <h3 class="text-sm md:text-base font-semibold truncate">#</h3>
+    <p class="text-xs md:text-sm text-gray-400">Simulation</p>
+    </div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md">
+  <img src="/assets/images/game3.jpg" alt="#3" class="w-full h-40 md:h-48 object-cover">
+  <div class="p-3">
+    <h3 class="text-sm md:text-base font-semibold truncate">#</h3>
+    <p class="text-xs md:text-sm text-gray-400">Dating Sim</p>
+   </div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md">
+  <img src="/assets/images/game4.jpg" alt="#4" class="w-full h-40 md:h-48 object-cover">
+  <div class="p-3">
+    <h3 class="text-sm md:text-base font-semibold truncate">#</h3>
+    <p class="text-xs md:text-sm text-gray-400">Turn Based RPG</p>
+   </div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md">
+  <img src="/assets/images/game4.jpg" alt="#5" class="w-full h-40 md:h-48 object-cover">
+  <div class="p-3">
+<h3 class="text-sm md:text-base font-semibold truncate">#</h3>
+<p class="text-xs md:text-sm text-gray-400">Turn Based RPG</p>
+  </div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md">
+  <img src="/assets/images/game4.jpg" alt="#6" class="w-full h-40 md:h-48 object-cover">
+  <div class="p-3">
+    <h3 class="text-sm md:text-base font-semibold truncate">#</h3>
+    <p class="text-xs md:text-sm text-gray-400">Turn Based RPG</p>
+  </div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 shadow-md hidden lg:block">
+  <img src="/assets/images/game1.jpg" alt="Another Game" class="w-full h-48 object-cover">
+  <div class="p-3">
+<h3 class="text-base font-semibold truncate">Another Game</h3>
+ <p class="text-sm text-gray-400">Strategy</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-8 text-center">
+  <a href="/games/categories.html">
+ <button class="border border-white hover:bg-white hover:text-black px-6 py-2 rounded transition duration-200">View All Games
+  </button>
+  </a>
+ </div>
+</section>
+           <!-- About -->
+<section class="p-6 text-sm md:text-base text-gray-400 max-w-4xl mx-auto text-center">
+  <p>clara is an online gaming portal bringing you high-quality games from around the world. You've never played free online games like these before!</p>
+</section>
+           <!-- Footer -->
+<footer class="p-6 bg-gray-800 text-center text-xs md:text-sm text-gray-400">
+  <div class="flex justify-center space-x-6 mb-4">
+  <a href="https://www.facebook.com/Randy.kyle09" class="hover:opacity-80 transition duration-200">
+      <img src="/assets/icons/facebook.png" alt="Facebook" class="w-6 h-6 rounded-full object-cover"></a>
+   <a href="#" class="hover:opacity-80 transition duration-200">
+        <img src="/assets/icons/youtube.png" alt="YouTube" class="w-6 h-6 rounded-full object-cover"></a>
+   <a href="#" class="hover:opacity-80 transition duration-200">
+     <img src="/assets/icons/instagram.png" alt="Instagram" class="w-6 h-6 rounded-full object-cover">
+   </a>
+</div>
+<p>&copy; 2025 clara. All rights reserved.</p>
+</footer>
+
+  <!-- Sidebar Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
