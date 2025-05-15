@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyle - Hentai Games News</title>
+ <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          height: {
+            'hero-mobile': '15rem',
+            'hero-desktop': '25rem',
+           }
+         }
+       }
+     }
+</script>
+</head>
+  <body class="bg-gray-900 text-white font-sans">
+           <!-- Header -->
+<header class="flex items-center justify-between p-4 bg-gray-800 sticky top-0 z-10">
+  <div class="flex items-center space-x-2">
+    <img src="/assets/logos/logo.gif" alt="Logo" class="h-8 w-8 rounded-lg">
+    <span class="text-xl font-bold"></span>
+</div>
+    <!-- Hamburger -->
+    <button id="menu-toggle" class="sm:hidden focus:outline-none z-50">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden sm:flex space-x-4">
+      <a href="/index.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        Home
+      </a>
+      <a href="/games/games.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Games
+      </a>
+      <a href="about.html" class="hover:text-pink-400">Categories</a>
+      <a href="contact.html" class="hover:text-pink-400">News</a>
+      <a href="auth/login.html" class="bg-pink-600 px-3 py-1 rounded hover:bg-pink-700">Login</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar Nav -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white p-6 transform -translate-x-full transition-transform duration-300 ease-in-out z-40 sm:hidden">
+    <button id="close-menu" class="mb-6 text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <nav class="flex flex-col space-y-4">
+      <a href="/index.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        Home
+      </a>
+      <a href="/games/games.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+        Games
+      </a>
+      <a href="/games/categories.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+        </svg>
+        Categories
+      </a>
+      <a href="/pages/news.html" class="hover:text-pink-400 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+        </svg>
+        News
+      </a>
+      <a href="auth/login.html" class="bg-pink-600 px-3 py-1 rounded hover:bg-pink-700 w-fit">Login</a>
+    </nav>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30 sm:hidden"></div>
+       <!-- Hero Section -->
+<section class="relative">
+  <img src="/assets/images/news-banner.jpg" alt="News Banner" class="w-full h-hero-mobile md:h-hero-desktop object-cover">
+    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-2xl md:text-5xl font-bold mb-4 max-w-3xl leading-tight">Latest Hentai Games News  Updates</h1>
+      <p class="text-sm md:text-lg mb-6 max-w-2xl">Stay updated with the newest releases, patches, and community events</p>
+  </div>
+</section>
+
+       <!-- News Section -->
+<section class="p-4 md:p-8 max-w-6xl mx-auto">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6">Recent News</h2>
+         <!-- News Articles -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <!-- News Article 1 -->
+<article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition duration-300 shadow-md">
+  <img src="/assets/images/news1.jpg" alt="News 1" class="w-full h-48 object-cover">
+  <div class="p-4">
+    <div class="flex justify-between items-center mb-2">
+  <span class="text-xs text-yellow-400">June 15, 2025</span>
+  <span class="text-xs bg-pink-600 px-2 py-1 rounded">New Release</span>
+</div>
+  <h3 class="text-lg font-bold mb-2">New Game "Dreams of Desire" Released</h3>
+   <p class="text-sm text-gray-400 mb-4">The highly anticipated visual novel is now available for free download on all platforms...</p>
+    <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition duration-200">Read More →</a>
+   </div>
+</article>
+        <!-- News Article 2 -->
+<article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition duration-300 shadow-md">
+        <img src="/assets/images/news2.jpg" alt="News 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs text-yellow-400">June 10, 2025</span>
+            <span class="text-xs bg-blue-600 px-2 py-1 rounded">Update</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Version 2.5 Patch Notes</h3>
+          <p class="text-sm text-gray-400 mb-4">The latest update brings new characters, bug fixes, and quality of life improvements...</p>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition duration-200">Read More →</a>
+        </div>
+      </article>
+
+      <!-- News Article 3 -->
+      <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition duration-300 shadow-md">
+        <img src="/assets/images/news3.jpg" alt="News 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs text-yellow-400">June 5, 2025</span>
+            <span class="text-xs bg-purple-600 px-2 py-1 rounded">Event</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Summer Festival Event Announced</h3>
+          <p class="text-sm text-gray-400 mb-4">Participate in our annual summer event with exclusive rewards and limited-time content...</p>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition duration-200">Read More →</a>
+        </div>
+      </article>
+
+      <!-- News Article 4 -->
+      <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition duration-300 shadow-md">
+        <img src="/assets/images/news4.jpg" alt="News 4" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs text-yellow-400">May 28, 2025</span>
+            <span class="text-xs bg-green-600 px-2 py-1 rounded">Community</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Developer Q&A Session Recap</h3>
+          <p class="text-sm text-gray-400 mb-4">Highlights from our recent live Q&A with the developers of popular titles...</p>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition duration-200">Read More →</a>
+        </div>
+      </article>
+
+      <!-- News Article 5 -->
+      <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition duration-300 shadow-md">
+        <img src="/assets/images/news5.jpg" alt="News 5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs text-yellow-400">May 20, 2025</span>
+            <span class="text-xs bg-red-600 px-2 py-1 rounded">Announcement</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">New Game Announcement Coming Soon</h3>
+          <p class="text-sm text-gray-400 mb-4">Teaser trailer suggests a new RPG with dating sim elements is in development...</p>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition duration-200">Read More →</a>
+        </div>
+      </article>
+
+      <!-- News Article 6 -->
+      <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition duration-300 shadow-md">
+        <img src="/assets/images/news6.jpg" alt="News 6" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs text-yellow-400">May 15, 2025</span>
+            <span class="text-xs bg-indigo-600 px-2 py-1 rounded">Guide</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Beginner's Guide to Hentai Games</h3>
+          <p class="text-sm text-gray-400 mb-4">New to the genre? Here's our comprehensive guide to getting started with the best titles...</p>
+          <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition duration-200">Read More →</a>
+        </div>
+      </article>
+    </div>
+
+        <div class="mt-8 text-center">
+      <button class="border border-white hover:bg-white hover:text-black px-6 py-2 rounded transition duration-200">Load More News</button>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="p-6 md:p-8 bg-gray-800 max-w-4xl mx-auto rounded-lg my-8">
+    <div class="text-center">
+      <h2 class="text-xl md:text-2xl font-bold mb-2">Stay Updated</h2>
+      <p class="text-sm md:text-base text-gray-400 mb-4">Subscribe to our newsletter for weekly updates on new games and events</p>
+      <form class="flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto">
+        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded font-semibold transition duration-200">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-6 bg-gray-800 text-center text-xs md:text-sm text-gray-400">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://www.facebook.com/Randy.kyle09" class="hover:opacity-80 transition duration-200">
+        <img src="/assets/icons/facebook.png" alt="Facebook" class="w-6 h-6 rounded-full object-cover">
+      </a>
+      <a href="#" class="hover:opacity-80 transition duration-200">
+        <img src="/assets/icons/youtube.png" alt="YouTube" class="w-6 h-6 rounded-full object-cover">
+      </a>
+      <a href="#" class="hover:opacity-80 transition duration-200">
+        <img src="/assets/icons/instagram.png" alt="Instagram" class="w-6 h-6 rounded-full object-cover">
+      </a>
+    </div>
+    <p>&copy; 2025 clara. All rights reserved.</p>
+  </footer>
+
+  <!-- Sidebar Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
